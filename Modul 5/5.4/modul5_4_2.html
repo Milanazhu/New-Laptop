@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            background-color: darkblue;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content"></div>
+    <div class="title"></div>
+    <script>
+        const contentEl = document.querySelector('.content');
+        const h1El = document.createElement('h1');
+        const headerEl = document.createElement('header');
+        //const textTittle = document.createTextNode('new heading node')
+        headerEl.classlist.add('header');
+
+        headerEl.innerHTML = '<span> test header</span>';
+
+        h1El.textContent = 'Heading tittle element';
+
+        const userName =  'John';
+        h1El.textContent = `Heading tittle element ${userName}`;
+
+        h1El.style.color = 'green';
+        h1El.style.backgroundColor = 'black';
+
+        //contentEl.append(h1El);
+        //contentEl.prepend(headerEl);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue {
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="title">Headhead</h1>
+    <button class="button">text button</button>
+    <!-- <toggle class="toggle"></toggle> -->
+    <script>
+        const buttonEl = document.querySelector('.button');
+        // console.log('Кнопка нажимается');
+        // const toggleEl = document.querySelector('.toggle')
+        // console.log('toggle');
+        const titleEl = document.querySelector('.title')
+
+        buttonEl.onclick = function () {
+            titleEl.textContent = "New test";
+            buttonEl.classList.toggle('blue');
+        }
+        
+    </script> 
+</body>
+</html>

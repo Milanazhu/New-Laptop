@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="content"></div> <!-- Создаю блок с селеткором классом content  -->
+    <div class="tittle"></div>
+    <div class="head"></div>
+    <script>
+        const contentElement = document.querySelector('.content'); //Создаю переменную которая идентифицируется по классу content и находится там
+        const h1Element = document.createElement('h1'); // Создаю Элемент 
+        contentElement.append(h1Element); // помещаю элемент внутрь переменной которая идентифицируется по селектору 
+        console.log(h1Element);
+
+        const titleElement = document.querySelector('.tittle');
+        const h2Element = document.createElement('h2');
+        titleElement.append(h2Element);
+        console.log(h2Element);
+
+        const headElement = document.querySelector('.head');
+        const h3Element = document.createElement('h3');
+        headElement.append(h3Element);
+        console.log(h3Element);
+
+        const h4Element = document.createElement('h4');
+        contentElement.prepend(h4Element);
+
+        const textTittle = document.createTextNode('первый способ создания контента в элементе')
+        console.log(textTittle);
+        h4Element.append(textTittle);
+
+        //h1Element.textContent = 'Второй способ добавления контента в элемент';
+
+        headElement.innerHTML = '<span>Создание html контанета черз узел использовать не рекоменжуется<span>'
+
+        const userName = prompt('Your name');
+
+        h1Element.textContent = ` ${userName}`;
+
+
+        //contentElement.prepend(headerElement);
+        //contentElement.append(h1Element); //Добавляем элемент h1 внутрь блока div и определяем этот блок по селектору
+    </script>
+</body>
+</html>

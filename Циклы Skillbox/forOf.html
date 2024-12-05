@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content"></div>
+    <script>
+        const contentEl = document.querySelector('.content');
+        const comment = ['good', 'bad', 'normal'];
+
+        for (const item of comment) {
+            console.log(item);
+            const h3El = document.createElement('h3');
+            h3El.textContent = item;
+            contentEl.append(h3El);
+        }
+    </script>
+    
+</body> 
+</html>

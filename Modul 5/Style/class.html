@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            background-color: blue;
+            height: 200px;
+        }
+        .h1 {
+            background-color: blueviolet;
+            height: 100px;
+        }
+        .title {
+            background-color: brown;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content"></div>
+    <div class="title"></div>
+    <script>
+        const contentEl = document.querySelector('.content');
+        const h1El = document.createElement('h1');
+        const headerEl = document.createElement('header');
+        headerEl.classList.add('header'); // добавляет клаасс
+        console.log(headerEl.classList.contains('header')); // проверяет есть ли такоей класс
+        h1El.classList.add('h1');
+        const titleEl = document.querySelector('.title')
+        console.log(titleEl.classList.contains('title'));
+        // headerEl.classList.remove('header'); // удаляет
+        // headerEl.classList.toggle('header'); // тогл переключатель то есть если есть то удалит есил нет то добавит
+
+        // h1El.style.color = 'green';
+        // h1El.style.backgroundColor = 'grey';
+
+        h1El.textContent = 'Name tittle';
+
+        headerEl.style.backgroundColor = 'red';
+        headerEl.textContent = 'MilanaZhusubalieva';
+
+        contentEl.append(h1El);
+        contentEl.prepend(headerEl);
+    </script>
+    
+</body>
+</html>

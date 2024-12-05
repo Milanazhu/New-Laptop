@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue {
+            color: blueviolet;
+        }
+        .block {
+            width: 200px;
+            height: 400px;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <button class="button">add block</button>
+    </div>
+    <script>
+        const contentEl = document.querySelector('.content');
+        const buttonEl = document.querySelector('.button');
+
+        const blockEl = document.createElement('div');
+        blockEl.classList.add('block');
+        blockEl.textContent = 'Hello world'
+
+        buttonEl.onclick = function () {
+            contentEl.append(blockEl);
+            blockEl.classList.toggle('block');
+        }
+    </script>
+</body>
+</html>
